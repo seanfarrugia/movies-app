@@ -12,6 +12,7 @@
         }
         .movieDesc{
             background-color: rgb(51, 51, 51,.95);
+            opacity: 0;
         }
         .cardArc {
             path {
@@ -51,6 +52,7 @@
     backdrop-filter: blur(10px);
     border-top-left-radius: 40px;
     box-shadow: -5px -10px 10px rgba(0,0,0,0.1);
+    
     > h3{
         font-size: 18px;
         font-weight: 700;

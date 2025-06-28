@@ -1,8 +1,8 @@
 import PocketBase from 'pocketbase'
 // import path from "path";
 // import { promises } from "fs";
-// import { Movie } from "../../mock-data/movie";
-// import { importMovies } from "../import";
+// import { Movie } from "@/app/mock-data/movie";
+// import { importMovies } from "@/app/mock-data/import";
 
 export async function GET() {
     try {

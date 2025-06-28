@@ -23,7 +23,7 @@
 
     & > span{
         opacity: 0;
-        transform: translateX(30px);
+        transform: translateX(10px);
         transition: .4s all ease-in-out;
     }
     &:hover{
@@ -41,6 +41,7 @@
 }
 .movieContentOuter{
     margin: 44px 24px;
+    position: relative;
 }
 .movieContentContainer{
     display: flex;
@@ -48,18 +49,35 @@
     gap: 34px;
 }
 .movieImage{
-    border-radius: 30px;
-    border: 1px solid rgb(93, 93, 93, .5);
+    border-radius: 20px;
+    border: 2px solid rgb(93, 93, 93, .9);
     object-fit: cover;
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: -60px;
+    @media screen and (min-width: 990px) {
+        height: 300px;
+        width: 300px;
+        border-radius: 30px;
+        top: unset;
+        position: relative;
+    }
 }
 .movieId{
     background-color: #f4f4f4;
     color: #333;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 12px;
     padding: 5px 20px;
     border-radius: 50px;
     width: fit-content;
+    margin-top: 80px;
+
+    @media screen and (min-width: 990px) {
+        font-size: 14px;
+        margin-top: 0;
+        font-weight: 700;
+    }
 }
 .movieContent{
     display: flex;
@@ -67,7 +85,10 @@
     gap: 14px;
 
     > h1{
-        font-size: 50px;
+        font-size: 30px;
+        @media screen and (min-width: 990px) {
+            font-size: 50px;
+        }
     }
     > ul{
         display: flex;
@@ -77,11 +98,12 @@
 }
 .movieGenre{
     list-style: none;
-    background-color: #f4f4f4;
+    background-color: #333;
     border-radius: 50px;
-    color: #333;
+    color: #f4f4f4;
     font-size: 12px;
     padding: 5px 20px;
+    text-transform: capitalize;
 }
 .movieDesc{
     margin-top: 40px;

@@ -18,6 +18,10 @@ body {
   margin: 0;
 }
 
+button, input {
+  font-family: var(--main-font);
+}
+
 a {
   color: inherit;
   text-decoration: none;

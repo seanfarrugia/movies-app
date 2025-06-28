@@ -8,6 +8,11 @@
     align-items: center;
     gap: 14px;
     margin-bottom: 24px;
+    margin-top: 24px;
+    
+    @media screen and (min-width: 990px) {
+        margin-top: 0;
+    }
 }
 .movieFilterBy{
     display: flex;
@@ -19,14 +24,12 @@
     }
 }
 .movieFilter{
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
     background-color: #333;
-    border: 1px solid rgb(93, 93, 93, .5);
     color: #f4f4f4;
     padding: 10px 20px;
     border-radius: 50px;
+    border: none;
     cursor: pointer;
 }
 .removeFilter{
