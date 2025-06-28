@@ -1,0 +1,29 @@
+.movieListNav{
+    display: flex;
+    align-items: center;
+}
+.moviesHeading{
+    font-size: 60px;
+    margin: 20px 0 40px 0;
+}
+.searchContainer{
+    > input {
+        border-radius: 30px;
+        background-color: #333;
+        border: 1px solid rgb(93, 93, 93);
+        font-size: 16px;
+        color: #f4f4f4;
+        padding: 15px 30px 15px 40px;
+        box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.5);
+    }
+    position: relative;
+    margin-left: auto;
+}
+.movieSearchIcon{
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .5;
+}

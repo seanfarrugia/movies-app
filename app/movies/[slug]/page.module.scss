@@ -1,0 +1,93 @@
+.placeholderContainer{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5b5b5b;
+    position: relative;
+    > svg{
+        font-size: 120px;
+        opacity: .5;
+    }
+}
+.homeButton{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    opacity: .5;
+    font-size: 20px;
+    transition: .4s opacity ease-in-out;
+
+    & > span{
+        opacity: 0;
+        transform: translateX(30px);
+        transition: .4s all ease-in-out;
+    }
+    &:hover{
+        opacity: 1;
+
+        & > span{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+    > svg{
+        font-size: 80px;
+    }
+}
+.movieContentOuter{
+    margin: 44px 24px;
+}
+.movieContentContainer{
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+.movieImage{
+    border-radius: 30px;
+    border: 1px solid rgb(93, 93, 93, .5);
+    object-fit: cover;
+}
+.movieId{
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 20px;
+    border-radius: 50px;
+    width: fit-content;
+}
+.movieContent{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    > h1{
+        font-size: 50px;
+    }
+    > ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+.movieGenre{
+    list-style: none;
+    background-color: #f4f4f4;
+    border-radius: 50px;
+    color: #333;
+    font-size: 12px;
+    padding: 5px 20px;
+}
+.movieDesc{
+    margin-top: 40px;
+
+    > h2{
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+}
