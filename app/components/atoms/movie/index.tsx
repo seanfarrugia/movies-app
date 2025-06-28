@@ -14,7 +14,7 @@ export const Movie: React.FC<MovieObj> = ({
     length,
     img,
 }) => {
-    return <li className={styles.movieItem}>
+    return <li data-testid="movie-item" className={styles.movieItem}>
                 <Link href={`/movies/${slug}`} className={styles.movieLink}>
                     <div className={styles.movieDesc}>
                         <svg className={styles.cardArc} xmlns="http://www.w3.org/2000/svg"><path /></svg>  

@@ -57,7 +57,7 @@ export const MovieList: React.FC = () => {
                             <span className={styles.movieFilterBy}><IoFunnelOutline />Filter By: </span>
                             {uniqueGenres.map((genre, index) => {
                                 const isActive = filters.includes(genre);
-                                return <button onClick={handleClick} key={index} type='button' className={`${styles.movieFilter} ${isActive && styles.active || ''}`}>{genre}</button>
+                                return <button data-testid="filter-item" onClick={handleClick} key={index} type='button' className={`${styles.movieFilter} ${isActive && styles.active || ''}`}>{genre}</button>
                             })}
                         </div>
                         {(filters.length || search) && (
