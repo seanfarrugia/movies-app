@@ -1,7 +1,7 @@
 'use client'
 import React, {useEffect, useState} from 'react';
 import { Movie } from '@/app/mock-data/movie';
-import { Movie as MovieItem } from '../../molecules/movie';
+import { Movie as MovieItem } from '../../atoms/movie';
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { IoFunnelOutline } from "react-icons/io5";
 import { MovieListHeader } from '../../molecules/movie-list-header';

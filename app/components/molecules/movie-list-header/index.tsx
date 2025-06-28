@@ -1,3 +1,4 @@
+import React from "react";
 import { IoIosSearch  } from "react-icons/io";
 
 import styles from './movie-list-header.module.scss';

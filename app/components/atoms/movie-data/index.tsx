@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './movie-data.module.scss';
 
 interface Props {

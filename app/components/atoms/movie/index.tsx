@@ -2,7 +2,7 @@ import React from 'react';
 import { Movie as MovieObj } from '@/app/mock-data/movie';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MovieData } from '../../atoms/movie-data';
+import { MovieData } from '../movie-data';
 import { IoIosStarOutline, IoIosTimer  } from "react-icons/io";
 
 import styles from './movie.module.scss';
