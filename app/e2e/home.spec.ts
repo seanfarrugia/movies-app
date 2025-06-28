@@ -12,6 +12,12 @@ test('navigate to movie detail page', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Deadpool' })).toBeVisible();
 });
 
+test('404 page', async ({ page }) => {
+    await page.goto('http://localhost:3000/movies/nonexistent-movie');
+
+    await expect(page.getByRole('heading', { name: '404' })).toBeVisible();
+});
+
 test('search movies', async ({ page }) => {
     await page.goto('http://localhost:3000');
 

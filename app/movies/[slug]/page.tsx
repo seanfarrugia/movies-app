@@ -9,9 +9,7 @@ import { IoMdArrowDroprightCircle, IoIosStarOutline, IoIosTimer, IoIosArrowRound
 import styles from './page.module.scss'
 
 interface MoviePageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>
 }
 
 export default async function MoviePage({ params }: MoviePageProps) {

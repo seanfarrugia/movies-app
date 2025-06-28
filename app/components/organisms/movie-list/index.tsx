@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import { Movie } from '@/app/mock-data/movie';
 import { Movie as MovieItem } from '../../atoms/movie';
 import { IoIosCloseCircleOutline } from "react-icons/io";
@@ -10,12 +10,17 @@ import { MovieSkeleton } from './skeleton';
 import styles from './movie-list.module.scss';
 
 export const MovieList: React.FC = () => {
+    const [movies, setMovies] = useState<Movie[]>([]);
+    const isInitialized = useRef(false);
+    
     useEffect(() => {
         fetch('/api/movies')
             .then(res => res.json())
-            .then(data => setMovies(data));
+            .then(data => {
+                isInitialized.current = true;
+                setMovies(data);
+            });
     }, []);
-    const [movies, setMovies] = useState<Movie[]>([]);
     const [search, setSearch] = useState('');
     const [filters, setFilters] = useState<string[]>([]);
 
@@ -76,6 +81,6 @@ export const MovieList: React.FC = () => {
                             })}
                         </ul>}
                     </>
-                : <MovieSkeleton />}
+                : isInitialized.current ? <p className={styles.noMovies}>No Movies added in our DataBase!</p> : <MovieSkeleton />}
             </div>
 }

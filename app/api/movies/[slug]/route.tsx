@@ -6,9 +6,9 @@ import PocketBase from 'pocketbase'
 
 export async function GET(
   req: Request,
-  { params }: { params: { slug: string } }
+  context: { params: Promise<{ slug: string }> }
 ) {
-  const { slug } = await params;
+  const { slug } = await context.params;;
   const pb = new PocketBase('http://127.0.0.1:8090')
   await pb.admins.authWithPassword(
       process.env.POCKETBASE_ADMIN_EMAIL!,
@@ -17,7 +17,9 @@ export async function GET(
   try {
       const movie = await pb.collection('movies').getFirstListItem(`slug="${slug}"`)
       return Response.json(movie)
-  } catch (error: any) {
+  } 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  catch (error: any) {
       console.error('Error fetching movie by slug:', error.response || error.message)
       return new Response('Movie not found', { status: 404 })
   }

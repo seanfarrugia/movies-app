@@ -21,7 +21,7 @@ export async function importMovies() {
 
         for (const movie of movies) {
             try {
-                const newMovie = await pb.collection("movies").create({
+                await pb.collection("movies").create({
                     name: movie.name,
                     slug: movie.slug,
                     description: movie.description,
