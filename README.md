@@ -1,6 +1,24 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Running Locally
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/seanfarrugia/movies-app.git
+```
+
+Go to the project directory
+
+```bash
+  cd movies-app
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
 
 First, run the pocketbase server:
 
@@ -59,6 +77,9 @@ docker run -p 3000:3000 -p 8090:8090 movies-app
 ```
 
 > ⚠️ **Notice**  
-> Running this Docker setup will start a new instance of the Movies App.  
-> The PocketBase database will be initialized empty.  
-> You will need to manually create a superuser account to enable authentication.
+>
+> - Running this Docker setup will start a new instance of the Movies App.  
+>
+> - The PocketBase database will be initialized empty.  
+>
+> - You will need to manually create a superuser account to enable authentication.
