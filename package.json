@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "npx vitest",
-    "test:e2e": "npx playwright test"
+    "test:e2e": "npx playwright test",
+    "postinstall": "playwright install"
   },
   "dependencies": {
     "next": "15.3.4",
